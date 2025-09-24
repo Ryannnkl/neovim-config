@@ -29,7 +29,7 @@ return {
       require('lualine').setup({
         options = {
           icons_enabled = true,
-          theme = 'tokyonight', -- Usa o mesmo tema do seu editor
+          theme = 'gruvbox-material', -- Usa o mesmo tema do seu editor
           component_separators = { left = '', right = '' },
           section_separators = { left = '', right = '' },
           disabled_filetypes = {
@@ -126,5 +126,16 @@ return {
         -- a configuração padrão já é excelente
       })
     end,
+  },
+  {
+    'sainnhe/gruvbox-material',
+    lazy = true,
+    enabled = true,
+    priority = 1000,
+    config = function()
+      vim.g.gruvbox_material_enable_bold = 1
+      vim.g.gruvbox_material_enable_italic = true
+      vim.cmd.colorscheme('gruvbox-material')
+    end
   },
 }
