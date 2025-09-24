@@ -16,7 +16,7 @@ vim.opt.signcolumn = 'yes'
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 
-vim.opt.expandtab = true     -- Usa espaços em vez de tabs
+vim.opt.expandtab = true
 vim.opt.tabstop = 2          -- Um tab no arquivo equivale a 2 espaços
 vim.opt.softtabstop = 2      -- Quantos espaços o Tab/Backspace usa no modo de inserção
 vim.opt.shiftwidth = 2       -- Quantos espaços usar para auto-indentação
