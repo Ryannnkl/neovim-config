@@ -14,4 +14,5 @@ return {
    require('plugins.formatter'),
    require('plugins.lsp'),
    require('plugins.ui'),
+   require('plugins/dap'),
 }
