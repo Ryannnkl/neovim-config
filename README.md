@@ -9,9 +9,10 @@ Esta é uma configuração pessoal para o Neovim, construída em Lua e gerenciad
 - **Explorador de Arquivos**: `nvim-tree` para uma navegação de arquivos eficiente.
 - **Busca Inteligente**: Busca fuzzy de arquivos, texto e buffers com `telescope.nvim`.
 - **LSP & Autocomplete**: Integração completa com o Language Server Protocol (`nvim-lspconfig`) para diagnósticos, `mason.nvim` para gerenciar LSPs, e `nvim-cmp` para autocompletar código.
+- **Integração com IA**: Autocomplete e chat com IA generativa usando o Google Gemini.
 - **Formatação e Linting**: Formatação de código ao salvar e linting com `none-ls.nvim` (usando Prettier e ESLint).
 - **Debugging**: Suporte para debugging com `nvim-dap` e `nvim-dap-ui`, configurado para Node.js.
-- **Integração Git**: Sinais de Git na gutter e comandos úteis com `gitsigns.nvim`.
+- **Integração Git**: Sinais de Git na gutter (`gitsigns.nvim`) e uma interface completa para o Git com `lazygit.nvim`.
 - **Syntax Highlighting**: Destaque de sintaxe aprimorado com `nvim-treesitter`.
 
 ## ⚡ Pré-requisitos
@@ -21,12 +22,15 @@ Esta é uma configuração pessoal para o Neovim, construída em Lua e gerenciad
 - **Nerd Font**: Necessária para que os ícones sejam exibidos corretamente. Recomendo a [FiraCode Nerd Font](https://www.nerdfonts.com/font-downloads).
 - **Ferramentas de Build**: Compilador C (como `gcc`) para o `nvim-treesitter`.
 - **Node.js**: Necessário para os LSPs de JavaScript/TypeScript, para o `prettier`/`eslint` e para o debugger.
+- **Lazygit**: Necessário para a integração com o `lazygit.nvim`.
+- **Chave de API do Gemini**: Para usar as funcionalidades de IA, é preciso ter a variável de ambiente `GEMINI_API_KEY` configurada.
 
 ## 🔌 Plugins Principais
 
 | Plugin | Descrição |
 | --- | --- |
 | [lazy.nvim](https://github.com/folke/lazy.nvim) | Gerenciador de Plugins |
+| [gemini.nvim](https://github.com/kiddos/gemini.nvim) | Integração com a IA do Google Gemini |
 | [gruvbox-material](https://github.com/sainnhe/gruvbox-material) | Tema de cores |
 | [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) | Statusline customizável |
 | [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) | Explorador de arquivos |
@@ -39,6 +43,7 @@ Esta é uma configuração pessoal para o Neovim, construída em Lua e gerenciad
 | [none-ls.nvim](https://github.com/nvimtools/none-ls.nvim) | Fonte para formatação e linting |
 | [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Melhora o syntax highlighting e indentação |
 | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Integração com Git |
+| [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim) | Interface para o `lazygit` |
 | [which-key.nvim](https://github.com/folke/which-key.nvim) | Mostra os atalhos disponíveis |
 
 ## ⌨️ Atalhos Principais
@@ -62,6 +67,7 @@ A tecla `Líder` está mapeada para a barra de **espaço**.
 
 | Atalho | Ação |
 | --- | --- |
+| `<leader>lg` | Abrir interface do `LazyGit` |
 | `<leader>hs` | Adicionar "hunk" atual ao stage do Git (`gitsigns`) |
 | `<leader>hr` | Resetar "hunk" atual (`gitsigns`) |
 
