@@ -1,9 +1,10 @@
 return {
+  {
     "folke/tokyonight.nvim",
     priority = 1000,
     config = function()
-      local transparent = false -- set to true if you would like to enable transparency
-  
+      local transparent = true -- set to true if you would like to enable transparency
+
       local bg = "#011628"
       local bg_dark = "#011423"
       local bg_highlight = "#143652"
@@ -13,7 +14,7 @@ return {
       local fg_dark = "#B4D0E9"
       local fg_gutter = "#627E97"
       local border = "#547998"
-  
+
       require("tokyonight").setup({
         style = "night",
         transparent = transparent,
@@ -39,8 +40,16 @@ return {
           colors.fg_sidebar = fg_dark
         end,
       })
-  
+
       vim.cmd("colorscheme tokyonight")
     end,
-  }
-  
+  },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  {
+    "f4z3r/gruvbox-material.nvim",
+    name = "gruvbox-material",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+}
