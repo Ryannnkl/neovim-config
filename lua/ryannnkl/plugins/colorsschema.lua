@@ -42,14 +42,14 @@ return {
         end,
       })
 
-      vim.cmd("colorscheme tokyonight")
+      vim.cmd([[colorscheme tokyonight]])
     end,
   },
   {
     "f4z3r/gruvbox-material.nvim",
     name = "gruvbox-material",
     -- lazy = false,
-    priority = 1000,
+    priority = 1001,
     opts = {},
   },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
