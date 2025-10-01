@@ -1,7 +1,7 @@
 return {
   {
     "folke/tokyonight.nvim",
-    lazy = false,
+    lazy = true,
     priority = 1000,
     config = function()
       local transparent = false -- set to true if you would like to enable transparency
@@ -42,15 +42,20 @@ return {
         end,
       })
 
-      vim.cmd([[colorscheme tokyonight]])
+      -- vim.cmd([[colorscheme tokyonight]])
     end,
   },
   {
     "f4z3r/gruvbox-material.nvim",
     name = "gruvbox-material",
-    -- lazy = false,
+    lazy = true,
     priority = 1001,
     opts = {},
   },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    lazy = false,
+    priority = 1000,
+  },
 }

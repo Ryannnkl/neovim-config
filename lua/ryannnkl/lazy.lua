@@ -21,3 +21,4 @@ require("lazy").setup({ { import = "ryannnkl.plugins" }, { import = "ryannnkl.pl
   },
 })
 
+vim.cmd.colorscheme("catppuccin")
