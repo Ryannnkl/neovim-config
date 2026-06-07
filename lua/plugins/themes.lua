@@ -17,6 +17,13 @@ return {
     priority = 1000,
     opts = {},
   },
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+    priority = 1000,
+    init = function()
+      vim.opt.background = "dark"
+    end,
+  },
   { "rebelot/kanagawa.nvim" },
   { "rose-pine/neovim", name = "rose-pine" },
 }
