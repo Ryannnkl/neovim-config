@@ -24,3 +24,5 @@ vim.api.nvim_create_autocmd("FileChangedShellPost", {
     vim.notify("Arquivo recarregado por mudanca externa", vim.log.levels.INFO)
   end,
 })
+
+require("config.ai_file_focus").setup()
