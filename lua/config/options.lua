@@ -4,6 +4,7 @@
 
 vim.opt.signcolumn = "number"
 vim.opt.numberwidth = 1
+vim.opt.laststatus = 0
 
 vim.diagnostic.config({
   signs = false,

@@ -25,4 +25,15 @@ vim.api.nvim_create_autocmd("FileChangedShellPost", {
   end,
 })
 
-require("config.ai_file_focus").setup()
+require("config.ai_file_focus").setup({ enabled = false })
+
+local background = require("config.background")
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  group = vim.api.nvim_create_augroup("user_background_transparency", { clear = true }),
+  callback = function()
+    vim.schedule(background.apply)
+  end,
+})
+
+vim.schedule(background.apply)

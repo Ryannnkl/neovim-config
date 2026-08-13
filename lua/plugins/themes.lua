@@ -24,6 +24,10 @@ return {
       vim.opt.background = "dark"
     end,
   },
-  { "rebelot/kanagawa.nvim" },
+  {
+    "rebelot/kanagawa.nvim",
+    priority = 1000,
+    opts = {},
+  },
   { "rose-pine/neovim", name = "rose-pine" },
 }
